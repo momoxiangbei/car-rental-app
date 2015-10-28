@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="5dp">
+
+    <RadioGroup
+        android:id="@+id/rg_lab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textSize="12dp"
+            android:text="主页"
+            android:drawableTop="@drawable/home_main_n"
+            android:gravity="center"
+            />
+        <RadioButton
+            android:id="@+id/rb_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="租车"
+            android:textSize="12dp"
+            android:drawableTop="@drawable/home_find_n"
+            android:gravity="center"
+            />
+        <RadioButton
+            android:id="@+id/rb_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="我的"
+            android:textSize="12dp"
+            android:drawableTop="@drawable/home_me_n"
+            android:gravity="center"
+            />
+
+
+    </RadioGroup>
+
+
+</LinearLayout>
