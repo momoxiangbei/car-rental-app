@@ -4,22 +4,11 @@
     android:orientation="vertical"
     android:background="@color/bg_color">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:gravity="center"
-        android:text="我的"
-        android:textSize="18sp"
-        android:background="@color/white"/>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#c8c8c8"/>
+    <include layout="@layout/item_header"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="160dp"
         android:padding="10dp"
         android:background="@color/white"
         android:layout_marginTop="10dp">
@@ -27,29 +16,23 @@
         <com.momoxiangbei.rentalcar.view.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/civ_head"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/head"
             app:border_color="#fff"
             app:border_width="1dp" />
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="墨墨向北"
-            android:layout_toEndOf="@id/civ_head"
-            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
             />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/arrow_right_gray" />
 
     </RelativeLayout>
 

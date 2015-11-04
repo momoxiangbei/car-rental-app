@@ -2,16 +2,16 @@ package com.momoxiangbei.rentalcar.fragment;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.Fragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.momoxiangbei.labmanage.R;
-import com.momoxiangbei.labmanage.dialog.WaitDialog;
+
+import com.momoxiangbei.rentalcar.dialog.WaitDialog;
 
 /**
  * Created by Administrator on 2015/9/8.

@@ -1,37 +1,68 @@
 package com.momoxiangbei.rentalcar;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+
+import com.momoxiangbei.rentalcar.fragment.HomeFragment;
+import com.momoxiangbei.rentalcar.fragment.MyFragment;
+import com.momoxiangbei.rentalcar.fragment.RetalFragment;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ViewPager viewPager;
+    private ArrayList<Fragment> fragmentList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initView();
+        initParam();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+
+    private void initView() {
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    private void initParam() {
+        fragmentList = new ArrayList<Fragment>();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        Fragment homeFragment= new HomeFragment();
+        Fragment retalFragment = new RetalFragment();
+        Fragment myFragment = new MyFragment();
+        fragmentList.add(homeFragment);
+        fragmentList.add(retalFragment);
+        fragmentList.add(myFragment);
+
+    }
+
+
+    class MyViewpager extends FragmentPagerAdapter {
+
+        ArrayList<Fragment> mList;
+        public MyViewpager(FragmentManager fm,ArrayList<Fragment> list) {
+            super(fm);
+            mList = list;
         }
 
-        return super.onOptionsItemSelected(item);
+        @Override
+        public Fragment getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return 0;
+        }
     }
+
 }
