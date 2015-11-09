@@ -18,7 +18,6 @@ public abstract class BaseTitleActivity extends BaseActivity {
         left = (RelativeLayout) findViewById(R.id.left);
         title = (TextView) findViewById(R.id.title);
         right = (TextView) findViewById(R.id.right);
-
     }
 
     @Override

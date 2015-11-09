@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Window;
 
 import com.momoxiangbei.rentalcar.dialog.WaitDialog;
 
@@ -29,7 +30,6 @@ public abstract class BaseActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle bundle) {
-
         super.onCreate(bundle);
         mContext = this;
         create(bundle);

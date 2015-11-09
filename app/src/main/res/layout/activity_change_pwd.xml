@@ -6,32 +6,40 @@
 
     <include layout="@layout/item_header"/>
 
-    <FrameLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:hint="请输入密码"
         android:background="@color/white"
-        android:padding="10dp">
+        android:textColor="#6d6d6d"
+        android:textColorHint="#6d6d6d"
+        android:textSize="14dp"
+        android:padding="10dp"
+        android:layout_marginBottom="2dp"
+        />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:textColor="#4a4a4a"
-            android:textSize="14dp"
-            android:hint="亲 请填写您要投诉或反馈的内容！"/>
-    </FrameLayout>
-
-
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入新密码"
+        android:background="@color/white"
+        android:textColor="#6d6d6d"
+        android:textColorHint="#6d6d6d"
+        android:textSize="14dp"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:textColor="@color/base_color"
-        android:layout_marginTop="20dp"
-        android:text="提交反馈"
         android:background="@color/white"
+        android:text="确定修改"
         android:gravity="center"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginTop="50dp"
+        />
+
+
+
+
 </LinearLayout>

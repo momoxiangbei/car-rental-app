@@ -2,9 +2,104 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/bg_color">
+    android:background="@color/white"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
 
-    <include layout="@layout/item_header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_name"
+            android:background="@color/base_color"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="手机号"
+            android:textColor="#121212"
+            android:textColorHint="#585858"
+            android:textSize="16sp"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#949494"
+        android:layout_marginTop="6dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_pwd"
+                android:background="@color/base_color"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="密码"
+                android:textColor="#121212"
+                android:textColorHint="#585858"
+                android:textSize="16sp"
+                android:background="@null"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:hint="验证码"
+                android:textColor="#121212"
+                android:textColorHint="#121212"
+                android:layout_marginRight="5dp"
+                android:textSize="16sp"
+                android:background="@drawable/log_btn"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#949494"
+        android:layout_marginTop="6dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:text="注册"
+        android:textSize="18sp"
+        android:textColor="#121212"
+        android:background="@drawable/log_btn"/>
 
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.momoxiangbei.rentalcar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 /**
  * Created by Administrator on 2015/11/4.
@@ -19,8 +20,14 @@ public class OrderDetailActivity extends BaseTitleActivity {
         setContentView(R.layout.activity_order_detail);
     }
 
+
+    @Override
+    public void initView() {
+        super.initView();
+    }
+
     @Override
     public void initParams() {
-
+        right.setVisibility(View.INVISIBLE);
     }
 }

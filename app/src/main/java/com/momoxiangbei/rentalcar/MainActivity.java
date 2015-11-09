@@ -5,63 +5,113 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.momoxiangbei.rentalcar.fragment.HomeFragment;
 import com.momoxiangbei.rentalcar.fragment.MyFragment;
-import com.momoxiangbei.rentalcar.fragment.RetalFragment;
+import com.momoxiangbei.rentalcar.fragment.RentalFragment;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ViewPager viewPager;
     private ArrayList<Fragment> fragmentList;
+    private MyAdapter myAdapter;
+    private RadioGroup rg_lab;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void create(Bundle bundle) {
         setContentView(R.layout.activity_main);
-
-        initView();
-        initParam();
     }
 
-
-    private void initView() {
+    @Override
+    public void initView() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        
+        rg_lab = (RadioGroup) findViewById(R.id.rg_lab);
+
     }
 
-    private void initParam() {
-        fragmentList = new ArrayList<Fragment>();
+    @Override
+    public void initParams() {
 
+        fragmentList = new ArrayList<Fragment>();
         Fragment homeFragment= new HomeFragment();
-        Fragment retalFragment = new RetalFragment();
+        Fragment rentalFragment = new RentalFragment();
         Fragment myFragment = new MyFragment();
         fragmentList.add(homeFragment);
-        fragmentList.add(retalFragment);
+        fragmentList.add(rentalFragment);
         fragmentList.add(myFragment);
+
+        myAdapter = new MyAdapter(getSupportFragmentManager(),fragmentList);
+        viewPager.setAdapter(myAdapter);
+        viewPager.setCurrentItem(0);
+        rg_lab.getChildAt(0).setSelected(true);
+
+        rg_lab.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.rb_home) {
+                    viewPager.setCurrentItem(0);
+                } else if (checkedId == R.id.rb_rental) {
+                    viewPager.setCurrentItem(1);
+                } else if (checkedId == R.id.rb_my) {
+                    viewPager.setCurrentItem(2);
+                }
+            }
+        });
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                setItemSelector(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
     }
 
+    @Override
+    public void initListeners() {
 
-    class MyViewpager extends FragmentPagerAdapter {
+    }
+
+    private void setItemSelector(int i) {
+
+        rg_lab.clearCheck();
+        rg_lab.getChildAt(0).setSelected(false);
+        rg_lab.getChildAt(1).setSelected(false);
+        rg_lab.getChildAt(2).setSelected(false);
+        rg_lab.getChildAt(i).setSelected(true);
+    }
+
+    class MyAdapter extends FragmentPagerAdapter {
 
         ArrayList<Fragment> mList;
-        public MyViewpager(FragmentManager fm,ArrayList<Fragment> list) {
+        public MyAdapter(FragmentManager fm,ArrayList<Fragment> list) {
             super(fm);
             mList = list;
         }
 
         @Override
         public Fragment getItem(int position) {
-            return null;
+            return mList.get(position);
         }
 
         @Override
         public int getCount() {
-            return 0;
+            return mList.size();
         }
     }
 

@@ -8,7 +8,7 @@ import com.momoxiangbei.rentalcar.R;
 /**
  * Created by Administrator on 2015/11/4.
  */
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseTitleFragment {
     @Override
     public void create(Bundle bundle) {
 
@@ -21,7 +21,8 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     public void initView(View view) {
-
+        super.initView(view);
+        title.setText("首页");
     }
 
     @Override

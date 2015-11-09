@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:layout_marginTop="10dp"
         android:background="@color/white">
 
         <TextView
@@ -41,7 +40,7 @@
         android:gravity="center_vertical"
         android:minHeight="50dp"
         android:padding="10dp"
-        android:layout_marginTop="1dp">
+        android:layout_marginTop="1dp">++
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +69,7 @@
         android:gravity="center_vertical"
         android:minHeight="50dp"
         android:padding="10dp"
-        android:layout_marginTop="1dp">
+        android:layout_marginTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -79,11 +78,10 @@
             android:minWidth="80dp"
             android:text="手机号" />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
-            android:background="@null"
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
@@ -98,7 +96,7 @@
         android:gravity="center_vertical"
         android:minHeight="50dp"
         android:padding="10dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="1dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -107,11 +105,10 @@
             android:minWidth="80dp"
             android:text="证件类型" />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
-            android:background="@null"
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
@@ -136,11 +133,10 @@
             android:minWidth="80dp"
             android:text="证件号" />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
-            android:background="@null"
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
@@ -149,6 +145,7 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/fl_change_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -176,10 +173,20 @@
             android:textSize="14sp" />
     </FrameLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
 
-
-
-
+    <TextView
+        android:id="@+id/tv_sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="退出登陆"
+        android:background="@color/white"
+        android:textColor="@color/base_color"
+        android:layout_marginBottom="5dp"/>
 
 
 </LinearLayout>

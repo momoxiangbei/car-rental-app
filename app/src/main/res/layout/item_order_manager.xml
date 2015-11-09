@@ -3,12 +3,15 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="14dp"
+    android:layout_marginRight="14dp"
     card_view:cardCornerRadius="5dp"
-    card_view:cardBackgroundColor="@color/base_color"
+    card_view:cardBackgroundColor="#f5f5f5"
     >
 
     <LinearLayout
+        android:id="@+id/ll_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -16,25 +19,41 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:padding="10dp">
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/red_point"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:paddingTop="10dp"
                 android:gravity="center"
-                android:text="订单号 :" />
+                android:text="订单号 :"
+                android:textColor="#616161"/>
             <TextView
+                android:id="@+id/tv_order_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="12345647778"/>
+                android:text="12345647778"
+                android:textColor="#000000"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_status"
+                android:layout_width="65dp"
                 android:layout_height="wrap_content"
-                android:text="正在进行中" />
+                android:text="进行中"
+                android:textSize="12dp"
+                android:textColor="#616161" />
 
         </LinearLayout>
 
@@ -47,24 +66,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="车型 :"/>
+                android:text="车型 :"
+                android:textColor="#616161"/>
             <TextView
+                android:id="@+id/tv_car_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="12345647778"/>
+                android:text="12345647778"
+                android:textColor="#000000"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="费用 :" />
+                android:text="费用 : "
+                android:textColor="#616161"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_expense"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:text="1235"/>
+                android:text="1235"
+                android:textColor="#000000"/>
 
         </LinearLayout>
 

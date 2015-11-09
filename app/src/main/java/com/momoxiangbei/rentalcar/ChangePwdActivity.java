@@ -6,26 +6,26 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * Created by Administrator on 2015/11/4.
+ * Created by Administrator on 2015/11/6.
  */
-public class MessageActivity extends BaseTitleActivity {
+public class ChangePwdActivity extends BaseTitleActivity {
 
     public static void startActivity(Context context) {
-        Intent intent = new Intent(context, MessageActivity.class);
+        Intent intent = new Intent(context, ChangePwdActivity.class);
         context.startActivity(intent);
     }
 
     @Override
     public void create(Bundle bundle) {
-        setContentView(R.layout.activity_message);
+        setContentView(R.layout.activity_change_pwd);
     }
 
     @Override
     public void initView() {
         super.initView();
+        left.setVisibility(View.INVISIBLE);
         right.setVisibility(View.INVISIBLE);
-        title.setText("我的消息");
-
+        title.setText("修改密码");
     }
 
     @Override

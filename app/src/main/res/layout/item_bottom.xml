@@ -2,8 +2,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_margin="5dp"
-    android:layout_marginBottom="5dp">
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@color/white">
 
     <RadioGroup
         android:id="@+id/rg_lab"
@@ -18,29 +19,29 @@
             android:button="@null"
             android:textSize="12dp"
             android:text="主页"
-            android:drawableTop="@drawable/home_main_n"
+            android:drawableTop="@drawable/btn_home_selector"
             android:gravity="center"
             />
         <RadioButton
-            android:id="@+id/rb_add"
+            android:id="@+id/rb_rental"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
             android:text="租车"
             android:textSize="12dp"
-            android:drawableTop="@drawable/home_find_n"
+            android:drawableTop="@drawable/btn_rental_selector"
             android:gravity="center"
             />
         <RadioButton
-            android:id="@+id/rb_fix"
+            android:id="@+id/rb_my"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
             android:text="我的"
             android:textSize="12dp"
-            android:drawableTop="@drawable/home_me_n"
+            android:drawableTop="@drawable/btn_my_selector"
             android:gravity="center"
             />
 

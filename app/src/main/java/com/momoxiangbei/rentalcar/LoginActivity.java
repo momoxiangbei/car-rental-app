@@ -7,7 +7,7 @@ import android.os.Bundle;
 /**
  * Created by Administrator on 2015/11/4.
  */
-public class LoginActivity extends BaseTitleActivity {
+public class LoginActivity extends BaseActivity {
 
     public static void startActivity(Context context) {
         Intent intent = new Intent(context, LoginActivity.class);
@@ -20,7 +20,17 @@ public class LoginActivity extends BaseTitleActivity {
     }
 
     @Override
+    public void initView() {
+
+    }
+
+    @Override
     public void initParams() {
+
+    }
+
+    @Override
+    public void initListeners() {
 
     }
 }
