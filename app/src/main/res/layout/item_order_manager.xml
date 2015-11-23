@@ -16,31 +16,35 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp">
+            android:paddingRight="10dp">
 
             <ImageView
-                android:layout_width="5dp"
-                android:layout_height="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/red_point"
+                android:id="@+id/logo"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/order_logo"
                 />
 
             <TextView
+                android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:paddingTop="10dp"
+                android:layout_toRightOf="@id/logo"
                 android:gravity="center"
                 android:text="订单号 :"
+                android:layout_marginLeft="10dp"
                 android:textColor="#616161"/>
             <TextView
                 android:id="@+id/tv_order_num"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@id/text"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
@@ -50,12 +54,14 @@
             <TextView
                 android:id="@+id/tv_status"
                 android:layout_width="65dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
                 android:text="进行中"
                 android:textSize="12dp"
-                android:textColor="#616161" />
+                android:textColor="#616161"
+                android:layout_alignParentRight="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +73,8 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="车型 :"
-                android:textColor="#616161"/>
+                android:textColor="#616161"
+                android:layout_marginLeft="25dp"/>
             <TextView
                 android:id="@+id/tv_car_type"
                 android:layout_width="wrap_content"

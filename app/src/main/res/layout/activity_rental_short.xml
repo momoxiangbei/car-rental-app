@@ -6,5 +6,167 @@
 
     <include layout="@layout/item_header"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取车地点"
+            android:textColor="#000000"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:text="请选择"
+            android:textColor="#4c4c4c"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取车日期"
+            android:textColor="#000000"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:text="请选择"
+            android:textColor="#4c4c4c"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_gray" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="还车日期"
+            android:textColor="#000000"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:text="请选择"
+            android:textColor="#4c4c4c"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_gray" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="车型"
+            android:textColor="#000000"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:text="请选择"
+            android:textColor="#4c4c4c"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_gray" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="1dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="车辆数"
+            android:textColor="#000000"
+            android:layout_marginLeft="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:gravity="center"
+            android:text="请选择"
+            android:textColor="#4c4c4c"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_gray" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="下一步"
+        android:textColor="@color/base_color"
+        android:background="@color/white"
+        android:gravity="center" />
+
 
 </LinearLayout>

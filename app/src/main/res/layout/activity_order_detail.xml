@@ -8,44 +8,59 @@
 
     <include layout="@layout/item_header"/>
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp">
+        android:layout_height="wrap_content"
+        android:background="@drawable/order_detail"
+        android:layout_marginTop="-10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:layout_gravity="center_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:paddingTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="订单号 :"
-            android:textColor="#616161"/>
+            android:textColor="#616161" />
         <TextView
             android:id="@+id/tv_order_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="12345647778"
-            android:textColor="#000000"/>
+            android:text="12345678"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/tv_status"
-            android:layout_width="65dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="进行中"
-            android:textSize="12dp"
-            android:textColor="#616161" />
+            android:textSize="10sp"
+            android:textColor="#616161"
+            android:layout_marginLeft="12dp"/>
 
     </LinearLayout>
 
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:padding="10dp">
+        android:layout_height="2dp"
+        android:background="#ffe381"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,35 +68,41 @@
             android:gravity="center"
             android:text="车型 :"
             android:textColor="#616161"/>
+
         <TextView
-            android:id="@+id/tv_car_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="12345647778"
+            android:text="无"
             android:textColor="#000000"/>
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="费用 : "
-            android:textColor="#616161"/>
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="费用 :"
+            android:textColor="#616161"
+            android:layout_marginLeft="40dp"/>
 
         <TextView
-            android:id="@+id/tv_expense"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1235"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="无"
             android:textColor="#000000"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:padding="10dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -96,15 +117,16 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="12345647778"
+            android:text="2015-11-11"
             android:textColor="#000000"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:padding="10dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -119,15 +141,17 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="12345647778"
+            android:text="2015-11-11"
             android:textColor="#000000"/>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:padding="10dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -143,6 +167,63 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:text="蒋村花园"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="增值服务 :"
+            android:textColor="#616161"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="无"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffe381"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="备注 :"
+            android:textColor="#616161"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="无"
             android:textColor="#000000"/>
 
     </LinearLayout>

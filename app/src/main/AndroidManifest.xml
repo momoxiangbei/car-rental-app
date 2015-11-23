@@ -132,6 +132,15 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".RentalLongSelectAcitvity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".RentalShortSelectActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
 
     </application>
 

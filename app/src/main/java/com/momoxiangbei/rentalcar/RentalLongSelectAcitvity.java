@@ -3,24 +3,25 @@ package com.momoxiangbei.rentalcar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextDirectionHeuristic;
 import android.view.View;
 import android.widget.TextView;
+
+import com.momoxiangbei.rentalcar.response.OrderDetail;
 
 /**
  * Created by Administrator on 2015/11/6.
  */
-public class RentalShortActivity extends BaseTitleActivity implements View.OnClickListener {
+public class RentalLongSelectAcitvity extends BaseTitleActivity implements View.OnClickListener {
 
     private TextView tv_next;
 
     @Override
     public void create(Bundle bundle) {
-        setContentView(R.layout.activity_rental_short);
+        setContentView(R.layout.activity_long_select);
     }
 
     public static void startActivity(Activity mActivit) {
-        Intent intent = new Intent(mActivit, RentalShortActivity.class);
+        Intent intent = new Intent(mActivit, RentalLongSelectAcitvity.class);
         mActivit.startActivity(intent);
     }
 
@@ -28,7 +29,7 @@ public class RentalShortActivity extends BaseTitleActivity implements View.OnCli
     public void initView() {
         super.initView();
         right.setVisibility(View.INVISIBLE);
-        title.setText("短租");
+        title.setText("长租");
 
         tv_next = (TextView) findViewById(R.id.tv_next);
     }
@@ -47,7 +48,7 @@ public class RentalShortActivity extends BaseTitleActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         if (v == tv_next){
-            RentalShortSelectActivity.startActivity(this);
+            OrderDetailActivity.startActivity(this);
         }
     }
 }
