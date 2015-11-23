@@ -18,7 +18,8 @@
             android:text="取车地点"
             android:textColor="#000000"
             android:layout_marginLeft="15dp" />
-        <EditText
+        <TextView
+            android:id="@+id/tv_location"
             android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:gravity="center"
@@ -27,7 +28,6 @@
             android:layout_alignParentRight="true"
             android:paddingRight="6dp"
             android:layout_marginRight="10dp"
-            android:background="@null"
             android:textSize="14sp"/>
         <ImageView
             android:layout_width="wrap_content"

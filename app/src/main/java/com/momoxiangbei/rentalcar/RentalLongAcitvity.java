@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.momoxiangbei.rentalcar.utils.DateTimePickDialogUtil;
 
@@ -15,7 +17,11 @@ import com.momoxiangbei.rentalcar.utils.DateTimePickDialogUtil;
 public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClickListener {
 
     private TextView tv_next;
+    private TextView tv_location;
     private EditText et_date;
+
+
+
     private String initStartDateTime = "2016年2月1日 12:00";
     private String initEndDateTime = "2016年2月1日 12:00";
 
@@ -34,7 +40,9 @@ public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClic
         super.initView();
         right.setVisibility(View.INVISIBLE);
         title.setText("长租");
+
         tv_next = (TextView) findViewById(R.id.tv_next);
+        tv_location = (TextView) findViewById(R.id.tv_location);
         et_date = (EditText) findViewById(R.id.et_date);
     }
 
@@ -43,6 +51,7 @@ public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClic
         super.initListeners();
         tv_next.setOnClickListener(this);
         et_date.setOnClickListener(this);
+        tv_location.setOnClickListener(this);
     }
 
     @Override
@@ -58,6 +67,10 @@ public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClic
             DateTimePickDialogUtil dateTimePicKDialog = new DateTimePickDialogUtil(
                     RentalLongAcitvity.this, initEndDateTime);
             dateTimePicKDialog.dateTimePicKDialog(et_date);
+        }else if (v == tv_location){
+
         }
     }
+
+
 }
