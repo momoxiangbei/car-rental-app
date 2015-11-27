@@ -7,40 +7,13 @@
     <include layout="@layout/item_header"/>
 
     <FrameLayout
-        android:id="@+id/fl_user"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:minWidth="80dp"
-            android:text="头像" />
-
-
-        <com.momoxiangbei.rentalcar.view.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/civ_head"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical|right"
-            android:src="@drawable/head"
-            app:border_color="#fff"
-            app:border_width="1dp" />
-
-    </FrameLayout>
-
-    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:gravity="center_vertical"
         android:minHeight="50dp"
         android:padding="10dp"
-        android:layout_marginTop="1dp">++
+        android:layout_marginTop="1dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -49,15 +22,14 @@
             android:minWidth="80dp"
             android:text="姓名" />
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
-            android:background="@null"
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
-            android:text="墨墨向北"
+            android:text="王雪莹"
             android:textSize="14sp" />
 
     </FrameLayout>
@@ -69,7 +41,7 @@
         android:gravity="center_vertical"
         android:minHeight="50dp"
         android:padding="10dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="1dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +57,7 @@
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
-            android:text=""
+            android:text="13732245162"
             android:textSize="14sp" />
     </FrameLayout>
 
@@ -103,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:minWidth="80dp"
-            android:text="证件类型" />
+            android:text="身份证号" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -112,35 +84,7 @@
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
-            android:text=""
-            android:textSize="14sp" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:gravity="center_vertical"
-        android:minHeight="50dp"
-        android:padding="10dp"
-        android:layout_marginTop="1dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:minWidth="80dp"
-            android:text="证件号" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:maxLength="15"
-            android:padding="5dp"
-            android:singleLine="true"
-            android:text=""
+            android:text="23***20"
             android:textSize="14sp" />
     </FrameLayout>
 

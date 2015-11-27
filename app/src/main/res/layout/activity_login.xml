@@ -3,8 +3,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp">
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,10 +12,12 @@
         android:layout_marginTop="200dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="2dp"
             android:src="@drawable/user_name" />
         <EditText
+            android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="手机号"
@@ -24,7 +26,8 @@
             android:textSize="16sp"
             android:background="@null"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="12dp"/>
+            android:layout_marginLeft="12dp"
+            android:inputType="phone"/>
 
     </LinearLayout>
 
@@ -39,10 +42,12 @@
         android:layout_marginTop="20dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="2dp"
             android:src="@drawable/user_pwd" />
         <EditText
+            android:id="@+id/et_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="密码"
@@ -51,7 +56,8 @@
             android:textSize="16sp"
             android:background="@null"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="12dp"/>
+            android:layout_marginLeft="12dp"
+            android:inputType="numberPassword"/>
     </LinearLayout>
 
     <ImageView
@@ -61,6 +67,7 @@
         android:layout_marginTop="6dp"/>
 
     <TextView
+        android:id="@+id/tv_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -70,6 +77,17 @@
         android:textSize="18sp"
         android:textColor="#121212"
         android:background="@drawable/log_btn"/>
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="立即注册"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="20dp"
+        />
 
 
 </LinearLayout>

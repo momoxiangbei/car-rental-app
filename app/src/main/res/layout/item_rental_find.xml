@@ -1,39 +1,63 @@
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:padding="20dp"
-    android:layout_marginBottom="1dp">
+    android:layout_marginBottom="1dp"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="福特福特斯"
+            android:textSize="16sp"
+            android:textColor="#161616"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car_family"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="2dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="家用型"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="福特福特斯"
-        android:textSize="16sp"
-        android:textColor="#161616"
-        />
-    <TextView
-        android:id="@+id/tv_money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="￥98/日均"
-        android:textSize="16sp"
-        android:layout_marginLeft="180dp"
-        android:textColor="#353535"
-        />
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥98/日均"
+            android:textColor="#353535"
+            />
 
-    <TextView
-        android:id="@+id/tv_postion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="杭州江干区"
-        android:textSize="12sp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:textColor="#8b8b8b"
-        />
+        <TextView
+            android:id="@+id/tv_postion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杭州江干区"
+            android:textColor="#8b8b8b"
+            android:layout_alignParentEnd="true"
+            />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

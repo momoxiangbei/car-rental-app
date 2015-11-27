@@ -1,6 +1,7 @@
 package com.momoxiangbei.rentalcar;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextDirectionHeuristic;
@@ -23,6 +24,12 @@ public class RentalShortActivity extends BaseTitleActivity implements View.OnCli
         Intent intent = new Intent(mActivit, RentalShortActivity.class);
         mActivit.startActivity(intent);
     }
+
+    public static void startActivity(Context mActivit) {
+        Intent intent = new Intent(mActivit, RentalShortActivity.class);
+        mActivit.startActivity(intent);
+    }
+
 
     @Override
     public void initView() {

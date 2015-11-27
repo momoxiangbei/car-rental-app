@@ -1,10 +1,13 @@
 package com.momoxiangbei.rentalcar;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -12,20 +15,30 @@ import android.widget.RadioGroup;
 import com.momoxiangbei.rentalcar.fragment.HomeFragment;
 import com.momoxiangbei.rentalcar.fragment.MyFragment;
 import com.momoxiangbei.rentalcar.fragment.RentalFragment;
+import com.momoxiangbei.rentalcar.utils.ToastUtil;
 
 import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
+
+    private long mExitTime;
 
     private ViewPager viewPager;
     private ArrayList<Fragment> fragmentList;
     private MyAdapter myAdapter;
     private RadioGroup rg_lab;
 
+
     @Override
     public void create(Bundle bundle) {
         setContentView(R.layout.activity_main);
     }
+
+    public static void startActivity(Context context) {
+        Intent intent = new Intent(context, MainActivity.class);
+        context.startActivity(intent);
+    }
+
 
     @Override
     public void initView() {
@@ -113,6 +126,22 @@ public class MainActivity extends BaseActivity {
         public int getCount() {
             return mList.size();
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if ((System.currentTimeMillis() - mExitTime) > 2000) {
+                ToastUtil.showToast("亲，再按一次就退出了哦！");
+                mExitTime = System.currentTimeMillis();
+
+            } else {
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
 }
