@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp">
+        android:layout_marginTop="150dp">
 
         <ImageView
             android:layout_width="16dp"
@@ -48,6 +48,35 @@
             android:layout_marginTop="2dp"
             android:src="@drawable/user_card" />
         <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="姓名"
+            android:textColor="#121212"
+            android:textColorHint="#585858"
+            android:textSize="16sp"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:inputType="text"/>
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#949494"
+        android:layout_marginTop="6dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/user_card" />
+        <EditText
             android:id="@+id/et_id_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +89,6 @@
             android:layout_marginLeft="12dp"
             android:inputType="number"/>
     </LinearLayout>
-
 
 
 
@@ -90,7 +118,7 @@
             android:background="@null"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="12dp"
-            android:inputType="numberPassword"/>
+            android:inputType="textPassword"/>
     </LinearLayout>
 
     <ImageView

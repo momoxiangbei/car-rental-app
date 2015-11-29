@@ -48,7 +48,7 @@ public class RentalLongSelectAcitvity extends BaseTitleActivity implements View.
     @Override
     public void onClick(View v) {
         if (v == tv_next){
-            OrderDetailActivity.startActivity(this);
+            OrderDetailActivity.startActivity(this,true);
         }
     }
 }

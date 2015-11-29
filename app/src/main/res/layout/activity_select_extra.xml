@@ -6,6 +6,34 @@
 
     <include layout="@layout/item_header"/>
 
+    <TextView
+        android:id="@+id/tv_need_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:text="需要代驾"/>
+
+    <TextView
+        android:id="@+id/tv_need_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:text="需要儿童座椅"
+        android:layout_marginTop="1dp"/>
+
+    <TextView
+        android:id="@+id/tv_need_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:text="需要加满油"
+        android:layout_marginTop="1dp"/>
+
+
+
     
 
 </LinearLayout>

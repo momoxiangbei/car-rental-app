@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.momoxiangbei.rentalcar.OrderDetailActivity;
 import com.momoxiangbei.rentalcar.R;
+import com.momoxiangbei.rentalcar.response.Order;
 import com.momoxiangbei.rentalcar.response.OrderDetail;
 
 import java.util.ArrayList;
@@ -20,9 +21,9 @@ import java.util.ArrayList;
 public class OrderManagerAdapter extends RecyclerView.Adapter<OrderManagerAdapter.MyViewHolder>{
 
     private Context mContext;
-    private ArrayList<OrderDetail> list = new ArrayList<OrderDetail>();
+    private ArrayList<Order> list = new ArrayList<Order>();
 
-    public OrderManagerAdapter(Context mContext,ArrayList<OrderDetail> list){
+    public OrderManagerAdapter(Context mContext,ArrayList<Order> list){
 
         this.mContext =  mContext;
         this.list = list;
@@ -37,13 +38,16 @@ public class OrderManagerAdapter extends RecyclerView.Adapter<OrderManagerAdapte
     }
 
     @Override
-    public void onBindViewHolder(OrderManagerAdapter.MyViewHolder holder, int position) {
-        holder.tv_order_num.setText(list.get(position).order_num);
+    public void onBindViewHolder(OrderManagerAdapter.MyViewHolder holder, final int position) {
+
+        holder.tv_order_num.setText(list.get(position).orderId);
+
 
         holder.ll_root.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OrderDetailActivity.startActivity(mContext);
+                OrderDetailActivity.orderId = list.get(position).orderId;
+                OrderDetailActivity.startActivity(mContext,false);
             }
         });
 
@@ -51,7 +55,7 @@ public class OrderManagerAdapter extends RecyclerView.Adapter<OrderManagerAdapte
 
     @Override
     public int getItemCount() {
-        return 10;
+        return list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

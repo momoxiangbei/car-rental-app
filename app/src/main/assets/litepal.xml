@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="rental" ></dbname>
+
+    <version value="1" ></version>
+
+    <list>
+        <mapping class="com.momoxiangbei.rentalcar.table.UserTable"></mapping>
+        <mapping class="com.momoxiangbei.rentalcar.table.OrderTable"></mapping>
+    </list>
+</litepal>

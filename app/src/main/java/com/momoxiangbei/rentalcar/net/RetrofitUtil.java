@@ -14,7 +14,7 @@ public class RetrofitUtil {
             synchronized (RetrofitUtil.class) {
                 if (singleton == null) {
                     Retrofit.Builder builder = new Retrofit.Builder();
-                    builder.baseUrl("http://api.nuuneoi.com/base/");
+                    builder.baseUrl("http://192.168.1.2:8080");
                     builder.addConverterFactory(GsonConverterFactory.create());
                     singleton = builder.build();
                 }

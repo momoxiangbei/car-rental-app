@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.momoxiangbei.rentalcar.OrderDetailActivity;
 import com.momoxiangbei.rentalcar.R;
 import com.momoxiangbei.rentalcar.RentalShortActivity;
+import com.momoxiangbei.rentalcar.response.Car;
+import com.momoxiangbei.rentalcar.response.CarListResponse;
 import com.momoxiangbei.rentalcar.response.OrderDetail;
 
 import java.util.ArrayList;
@@ -21,9 +23,9 @@ import java.util.ArrayList;
 public class RentalFindAdapter extends RecyclerView.Adapter<RentalFindAdapter.MyViewHolder>{
 
     private Context mContext;
-    private ArrayList<OrderDetail> list = new ArrayList<OrderDetail>();
+    private ArrayList<Car> list = new ArrayList<Car>();
 
-    public RentalFindAdapter(Context mContext, ArrayList<OrderDetail> list){
+    public RentalFindAdapter(Context mContext, ArrayList<Car> list){
 
         this.mContext =  mContext;
         this.list = list;
@@ -40,8 +42,9 @@ public class RentalFindAdapter extends RecyclerView.Adapter<RentalFindAdapter.My
     @Override
     public void onBindViewHolder(RentalFindAdapter.MyViewHolder holder, int position) {
 
-        holder.tv_name.setText("宝马520");
-        holder.tv_position.setText("杭州江干区下沙新雁公寓13号楼");
+        holder.tv_name.setText(list.get(position).carType);
+        holder.tv_position.setText(list.get(position).shopName);
+        holder.tv_money.setText(list.get(position).price);
 
         holder.ll_root.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +58,7 @@ public class RentalFindAdapter extends RecyclerView.Adapter<RentalFindAdapter.My
 
     @Override
     public int getItemCount() {
-        return 40;
+        return list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

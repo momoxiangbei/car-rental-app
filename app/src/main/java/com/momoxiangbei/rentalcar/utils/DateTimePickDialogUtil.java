@@ -20,7 +20,7 @@ public class DateTimePickDialogUtil implements DatePicker.OnDateChangedListener,
         private DatePicker datePicker;
         private TimePicker timePicker;
         private AlertDialog ad;
-        private String dateTime;
+        public static String dateTime;
         private String initDateTime;
         private Activity activity;
 

@@ -14,6 +14,7 @@
         android:padding="10dp">
 
         <EditText
+            android:id="@+id/ed_feedback_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -25,6 +26,7 @@
 
 
     <TextView
+        android:id="@+id/tv_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"

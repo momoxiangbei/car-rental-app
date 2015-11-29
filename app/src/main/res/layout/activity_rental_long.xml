@@ -7,6 +7,7 @@
     <include layout="@layout/item_header"/>
 
     <RelativeLayout
+        android:id="@+id/rl_position"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:padding="10dp"
@@ -19,7 +20,6 @@
             android:textColor="#000000"
             android:layout_marginLeft="15dp" />
         <TextView
-            android:id="@+id/tv_location"
             android:layout_width="wrap_content"
             android:layout_height="300dp"
             android:gravity="center"
@@ -107,6 +107,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/rl_car_type"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:padding="10dp"

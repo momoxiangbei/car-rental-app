@@ -40,6 +40,7 @@ public class MainActivity extends BaseActivity {
     }
 
 
+
     @Override
     public void initView() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);

@@ -7,6 +7,6 @@ import com.google.gson.Gson;
  */
 public class BaseResponse  {
 
-    public int errCode;  //0是正确 1是错误
-    public String errMsg;
+    public Boolean success;
+
 }

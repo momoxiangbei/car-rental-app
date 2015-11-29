@@ -6,6 +6,7 @@ import com.momoxiangbei.rentalcar.response.UserResponse;
 import retrofit.Call;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
+import retrofit.http.GET;
 import retrofit.http.POST;
 
 /**
@@ -25,5 +26,12 @@ public interface ServiceAPI  {
          @Field("user_name") String user_phone,
          @Field("user_pwd") String user_pwd
     );
+
+    @FormUrlEncoded
+    @POST("/mgr/test/aaa")
+    Call<BaseResponse> test(
+            @Field("user_name") String user_phone
+    );
+
 
 }

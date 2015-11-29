@@ -7,6 +7,7 @@
     <include layout="@layout/item_header"/>
 
     <EditText
+        android:id="@+id/ed_old_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入密码"
@@ -16,9 +17,11 @@
         android:textSize="14dp"
         android:padding="10dp"
         android:layout_marginBottom="2dp"
+        android:inputType="textPassword"
         />
 
     <EditText
+        android:id="@+id/ed_new_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入新密码"
@@ -26,9 +29,11 @@
         android:textColor="#6d6d6d"
         android:textColorHint="#6d6d6d"
         android:textSize="14dp"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:inputType="textPassword"/>
 
     <TextView
+        android:id="@+id/tv_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"

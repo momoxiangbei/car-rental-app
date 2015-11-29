@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.momoxiangbei.rentalcar.utils.DateTimePickDialogUtil;
+import com.momoxiangbei.rentalcar.utils.ToastUtil;
 
 /**
  * Created by Administrator on 2015/11/6.
@@ -17,9 +19,10 @@ import com.momoxiangbei.rentalcar.utils.DateTimePickDialogUtil;
 public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClickListener {
 
     private TextView tv_next;
-    private TextView tv_location;
     private EditText et_date;
 
+    private RelativeLayout rl_car_type;
+    private RelativeLayout rl_position;
 
 
     private String initStartDateTime = "2016年2月1日 12:00";
@@ -42,8 +45,9 @@ public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClic
         title.setText("长租");
 
         tv_next = (TextView) findViewById(R.id.tv_next);
-        tv_location = (TextView) findViewById(R.id.tv_location);
         et_date = (EditText) findViewById(R.id.et_date);
+        rl_car_type = (RelativeLayout) findViewById(R.id.rl_car_type);
+        rl_position = (RelativeLayout) findViewById(R.id.rl_position);
     }
 
     @Override
@@ -51,7 +55,8 @@ public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClic
         super.initListeners();
         tv_next.setOnClickListener(this);
         et_date.setOnClickListener(this);
-        tv_location.setOnClickListener(this);
+        rl_car_type.setOnClickListener(this);
+        rl_position.setOnClickListener(this);
     }
 
     @Override
@@ -67,8 +72,14 @@ public class RentalLongAcitvity extends BaseTitleActivity implements View.OnClic
             DateTimePickDialogUtil dateTimePicKDialog = new DateTimePickDialogUtil(
                     RentalLongAcitvity.this, initEndDateTime);
             dateTimePicKDialog.dateTimePicKDialog(et_date);
-        }else if (v == tv_location){
 
+        }else if (v == rl_position){
+
+            SelectLocationActivity.startActivity(this);
+
+        }else if (v == rl_car_type){
+
+            SelectCarTypeActivity.startActivity(this);
         }
     }
 

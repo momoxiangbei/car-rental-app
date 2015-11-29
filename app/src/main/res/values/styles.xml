@@ -5,4 +5,8 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Dialog" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+
+    </style>
+
 </resources>

@@ -23,13 +23,13 @@
             android:text="姓名" />
 
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
-            android:text="王雪莹"
             android:textSize="14sp" />
 
     </FrameLayout>
@@ -51,13 +51,13 @@
             android:text="手机号" />
 
         <TextView
+            android:id="@+id/tv_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
             android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
-            android:text="13732245162"
             android:textSize="14sp" />
     </FrameLayout>
 
@@ -78,13 +78,12 @@
             android:text="身份证号" />
 
         <TextView
+            android:id="@+id/tv_id_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|right"
-            android:maxLength="15"
             android:padding="5dp"
             android:singleLine="true"
-            android:text="23***20"
             android:textSize="14sp" />
     </FrameLayout>
 
